@@ -1,0 +1,11 @@
+
+.titulo{
+  font-size: larger;
+  border: 5px solid black;
+  background: linear-gradient(90deg, rgb(255,240,51,0.5), #F7D716,rgb(255,240,51,0.5));;;
+}
+.titulo__nombre {
+  text-align: center;
+  font-family: 'Comic Neue', cursive;
+}
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,300&display=swap');
