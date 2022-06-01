@@ -1,18 +1,21 @@
+import React from 'react';
 
-import './App.css';
+import NavBar from "./Components/NavBar"
 
 
 
-function Titulo() {
-  return (<div><h1 className='titulo__nombre'>Tienda de remeras "Comic-Heros"</h1></div>);
-  }
 
 
 
 function App() {
   return (
-    <div className='titulo'><Titulo/></div>
+    <div className="titulo">
+
+    <div><NavBar/></div>
+
+  </div>
   )
 }
 
 export default App;
+
