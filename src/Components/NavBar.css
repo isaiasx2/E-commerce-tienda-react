@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,300&display=swap');
+@media (max-width:600px){
+    .nav-primario{
+        flex-direction: column;
+        gap: 20px;
+        flex-wrap: wrap;
+        align-content: center;
+        margin: 0 auto;
+       
+        
+        }
+    
+}
+
+
+
+.nav-primario {
+    width: 100%;
+    height: auto;
+    background: none;
+    padding: 10px 0;
+    margin: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.titulo{
+    font-size: larger;
+    border: 5px solid black;
+    background: linear-gradient(90deg, rgb(255,240,51,0.5), #F7D716,rgb(255,240,51,0.5));
+  }
+  .titulo__nombre {
+    text-align: center;
+    font-family: 'Comic Neue', cursive;
+    font-weight: bolder;
+    
+  }
+  
+ #boton_dc {
+     padding:20px;
+     background-color: rgb(255, 174, 0);
+     border-radius: 5px;
+     box-shadow: 3px 3px 2px 3px;
+ }
+ #boton_marvel {
+    padding:20px;
+     background-color: rgb(255, 174, 0);
+     border-radius: 5px;
+     box-shadow: 3px 3px 2px 3px;
+     
+ }
+ #boton_nosotros {
+    padding:20px;
+    background-color: rgb(255, 174, 0);
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px 3px;
+ }
+ #boton_contacto {
+    padding:20px;
+    background-color: rgb(255, 174, 0);
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px 3px;
+ }
+ a {
+     width: 100px;
+     height: 20px;
+     text-align: center;
+     text-decoration: none;
+     font-family:'Comic Neue', cursive;
+     text-transform: uppercase;
+     font-weight: bolder;
+    
+ }
