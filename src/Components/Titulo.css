@@ -1,0 +1,20 @@
+.titulo {
+    
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Lexend Zetta', sans-serif;
+    background: linear-gradient(90deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.274), rgba(0, 0, 0, 0.664));
+    
+   
+   
+}
+.titulo h1{
+    width: 50%;
+    margin-bottom: 0;
+    color: rgb(166, 255, 0)
+     
+    
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,300;1,700&family=Lexend+Zetta:wght@900&display=swap');

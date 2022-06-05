@@ -1,25 +1,36 @@
 import React from 'react';
-import "./NavBar.css"
-import "./images/iphone.png"
+import './NavBar.css';
+import CartWidget from './CartWidget';
+import {BsPhoneVibrate} from 'react-icons/all'
+import {IoIosPeople} from 'react-icons/all'
+import {GiPunchBlast} from 'react-icons/all'
+import {GiFrogPrince} from 'react-icons/all'
 
-export default function NavBar() {
-return (
-  <div className="contenedor_nav_padre"> 
-    <div>  
-    <h1 className='titulo__nombre'>Tienda de remeras     "Comic-Heros" </h1>
-    </div>
-    <div className="contenedor_nav">
-      
-      <nav className="nav-primario">
-      <a href="#" id="boton_dc">¡DC-Team!</a>
-      <a href="#" id="boton_marvel">¡MARVEL-Team!</a>
-      <a href="#" id="boton_nosotros">Nosotros</a>
-      <a href="#" id="boton_contacto">Contacto</a>
-      </nav>
-      
 
-    </div>
-  </div>
-)
-};
+
+
+
+
+
+
+export const NavBar  = ()=> {
   
+    return (
+      
+    
+      <>
+      <a href='#' target="_blank"><GiFrogPrince/>Dc Team</a>
+      <a href='#' target="_blank"><GiPunchBlast/>Marvel Team</a> 
+      <a href='#' target="_blank"><IoIosPeople/>Nosotros </a> 
+      <a href='#' target="_blank"><BsPhoneVibrate/>Contacto</a>
+      <a href='#' target="_blank"><CartWidget/>Carrito</a>
+      
+      </>
+      
+      
+    )
+}
+
+export default NavBar;
+
+

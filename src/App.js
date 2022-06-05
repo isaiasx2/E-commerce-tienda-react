@@ -1,19 +1,21 @@
 import React from 'react';
-
-import NavBar from "./Components/NavBar"
-
-
+import Titulo from './Components/Titulo'
+import {NavBar} from './Components/NavBar'
+import {Children} from './Components/Children/Children'
 
 
 
 
 function App() {
   return (
-    <div className="titulo">
+  <>
+    
+    <header className='titulo'><Titulo/></header>
+    <section className='navegacion'><NavBar/></section>
+    <Children />
+    
 
-    <div><NavBar/></div>
-
-  </div>
+  </>
   )
 }
 
