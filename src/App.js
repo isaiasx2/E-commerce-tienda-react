@@ -1,7 +1,8 @@
 import React from 'react';
-import Titulo from './Components/Titulo'
-import {NavBar} from './Components/NavBar'
-import {Children} from './Components/Children/Children'
+import Titulo from './Components/Titulo/Titulo'
+import {NavBar} from './Components/NavBar/NavBar'
+import { ItemListContainer } from './Components/ItemListContainer/ItemListContainer';
+/**import {Children} from './Components/Children/Children'*/
 
 
 
@@ -11,8 +12,9 @@ function App() {
   <>
     
     <header className='titulo'><Titulo/></header>
-    <section className='navegacion'><NavBar/></section>
-    <Children />
+    <><NavBar/></>
+    <ItemListContainer/>
+    
     
 
   </>
