@@ -1,15 +1,15 @@
 import React from "react";
-import { Item } from "./Item";
 
 
-export const ItemListContainer = ()=>{
+
+export const ItemListContainer = (props)=>{
     
 
     
 
     return(
-        <>
-        <Item/>
-        </>
+        <section>
+        <h1>{props.mensaje}</h1>
+        </section>
     )
 }

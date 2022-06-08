@@ -17,19 +17,21 @@ export const NavBar  = ()=> {
   
     return (
       
+      <>
     
       <nav className='navegacion'>
+      <h1>Tienda de remeras Comic-Heros</h1>
       <ul>
-      <li><a href='#' target="_blank"><GiFrogPrince/>Dc Team</a></li>
-      <li><a href='#' target="_blank"><GiPunchBlast/>Marvel Team</a> </li>
-      <li><a href='#' target="_blank"><IoIosPeople/>Nosotros </a> </li>
-      <li><a href='#' target="_blank"><BsPhoneVibrate/>Contacto</a></li>
-      <li><a href='#' target="_blank"><CartWidget/>Carrito</a></li>
+      <li><a href='/#' ><GiFrogPrince/>Dc Team</a></li>
+      <li><a href='/#' ><GiPunchBlast/>Marvel Team</a> </li>
+      <li><a href='/#' ><IoIosPeople/>Nosotros </a> </li>
+      <li><a href='/#' ><BsPhoneVibrate/>Contacto</a></li>
+      <li><a href='/#' ><CartWidget/>Carrito</a></li>
       </ul>
       
       </nav>
       
-      
+      </>
     )
 }
 
