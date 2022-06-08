@@ -45,6 +45,7 @@
     background-color: black;
     margin: 0;
     font-size: 30px;
+    width:auto;
     
 }
 
@@ -55,11 +56,14 @@
 
 /*MEDIAQUERY**/
 
-@media (max-width: 650px) {
+@media (max-width: 780px) {
     .navegacion ul, .navegacion h1{
         flex-direction: column;
         align-items: center;
         row-gap: 50px;
+        width: auto;
+        height: auto;
+        
 
 
         
