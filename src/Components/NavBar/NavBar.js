@@ -17,7 +17,7 @@ export const NavBar  = ()=> {
   
     return (
       
-      <>
+      <section>
     
       <nav className='navegacion'>
       <h1>Tienda de remeras Comic-Heros</h1>
@@ -31,7 +31,7 @@ export const NavBar  = ()=> {
       
       </nav>
       
-      </>
+      </section>
     )
 }
 
