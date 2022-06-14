@@ -31,7 +31,7 @@ export const ItemCount = ({initial, stock, onAdd})=>{
     
     return (
         
-        <div className="contador">
+        <div className="contador" >
             <h2>Ingresa cantidad</h2>
         
             <button disabled={counter <= 1} onClick={restar}>-</button>
