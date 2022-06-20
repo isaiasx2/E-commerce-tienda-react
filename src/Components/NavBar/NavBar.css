@@ -40,7 +40,7 @@
 
 .navegacion h1 {
     color:rgb(166, 255, 0);
-    font-family: 'Lexend Zetta', sans-serif;
+    font-family: 'Fascinate', cursive;
     font-weight: bolder;
     background-color: black;
     margin: 0;
@@ -48,7 +48,6 @@
     width:auto;
     
 }
-
 
 
 
@@ -81,3 +80,5 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,300;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,300;1,700&family=Lexend+Zetta:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,300;1,700&family=Lexend+Zetta:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,300;1,700&family=Fascinate&family=Lexend+Zetta:wght@900&display=swap');
