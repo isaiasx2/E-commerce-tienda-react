@@ -26,10 +26,10 @@ export const ItemListContainer = ()=>{
 
     useEffect(()=>{
         if(categoriaId){
-            getItem.then(res => setItem(res.filter(Articulos=>Articulos.category===categoriaId)));
+            getItem.then(res => setItem(res.filter(Articulos=>Articulos.category===categoriaId))).catch(err=>(console.log(err)));
         }
         else {
-            getItem.then(res=>setItem(res))
+            getItem.then(res=>setItem(res)).catch(err=>console.log(err))
             }
 
     }, [categoriaId])
