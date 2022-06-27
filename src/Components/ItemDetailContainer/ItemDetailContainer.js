@@ -25,7 +25,7 @@ export const ItemDetailContainer = () => {
     });
 
     useEffect(()=>{
-        getItem.then(res=>setItem(res.find(Articulos=>Articulos.id === parseInt(detalleId))));
+        getItem.then(res=>setItem(res.find(Articulos=>Articulos.id === parseInt(detalleId)))).catch(err=>console.log(err));
     }, [])
 
 
