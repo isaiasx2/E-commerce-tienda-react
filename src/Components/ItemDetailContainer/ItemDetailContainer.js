@@ -12,7 +12,7 @@ import {useParams} from "react-router-dom"
 
 export const ItemDetailContainer = () => {
 
-    const[item, setItem] = useState({});
+    const[item, setItem] = useState();
 
     const {detalleId} = useParams();
 
@@ -37,7 +37,7 @@ export const ItemDetailContainer = () => {
 
 
   return (
-    <div><ItemDetail item={item}/></div>
+    <div>{item?<ItemDetail item={item}/> : <h2>Cargando detalles...</h2>}</div>
   )
 }
 

@@ -1,11 +1,21 @@
 import React from 'react';
 import "./ItemDetail.css"
 import { ItemCount } from '../ItemCount/ItemCount';
+import { useState } from 'react';
+import {Link} from 'react-router-dom';
 
 
 export const ItemDetail = ({item}) => {
+  
+  const [goToCart, setGoToCart] = useState(false);
+
+  
+  
+  
+  
+  
   const onAdd = (cantidad)=>{
-    alert(`Sumaste ${cantidad} unidades `);
+    setGoToCart(true);
 }
 
 
@@ -19,7 +29,11 @@ export const ItemDetail = ({item}) => {
                 <span>Precio : {item.price}$</span>
             </div>
             <div className="boton__carrito">
-            <ItemCount  initial={1} stock={5} onAdd={onAdd}/>
+            {
+              goToCart
+              ?<Link to="/cart" className="terminar__compra">Terminar compra</Link>
+              :<ItemCount initial={1} stock={5} onAdd={onAdd}/>
+            }
             </div>
         </div>
     </div>

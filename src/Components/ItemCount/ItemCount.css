@@ -10,3 +10,7 @@
     
     
 }
+
+.bot1,.bot2, .botConf:hover {
+    cursor: pointer; 
+}
