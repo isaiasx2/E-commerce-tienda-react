@@ -10,10 +10,14 @@ const CartProvider = ({children}) =>{
  const [cart, setCart] = useState([]);
 
 
-    const addItem = (item, newQuantity) =>{
-        const newCart = cart.filter(prod => prod.id !== item.id);
-        newCart.push({...item, quantity: newQuantity});
-        setCart(newCart);
+    const addItem = (item, quantity) => {
+        if(isInCart(item.id)) {
+            setCart(cart.map(product => {
+                return product.id === item.id ?{...product, quantity: product.quantity + quantity}: product
+            }));
+        } else{
+            setCart([...cart, {...item, quantity}]);
+        }
     }
     console.log("Se agrego al carrito :", cart)
 
@@ -23,7 +27,7 @@ const CartProvider = ({children}) =>{
 
     const clearCart = ()=> setCart([]);
 
-    const isInCart = (id) => {return cart.find(product => product.id === id) ? true : false;}
+    const isInCart = (id) => {return cart.find(product => product.id === id)}
 
     const removeProduct = (id) => setCart(cart.filter(product => product.id !== id));
 

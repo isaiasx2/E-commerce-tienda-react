@@ -8,9 +8,12 @@ import { useCartContext } from '../../context/CartContext';
 
 export const ItemDetail = ({item}) => {
   
-  const [goToCart, setGoToCart] = useState(false);
+  const [goToCart, setGoToCart] = useState(0);
 
   const {addItem} = useCartContext();
+  
+ 
+  
   
   
   
@@ -18,7 +21,7 @@ export const ItemDetail = ({item}) => {
   
   
   const onAdd = (quantity)=>{
-    setGoToCart(true);
+    setGoToCart(quantity);
     addItem(item, quantity);
     
 }
@@ -35,7 +38,8 @@ export const ItemDetail = ({item}) => {
             </div>
             <div className="boton__carrito">
             {
-              goToCart
+              
+              goToCart 
               ?<Link to="/cart" className="terminar__compra">Terminar compra</Link>
               :<ItemCount initial={1} stock={5} onAdd={onAdd}/>
             }
