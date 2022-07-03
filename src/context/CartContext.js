@@ -19,7 +19,8 @@ const CartProvider = ({children}) =>{
             setCart([...cart, {...item, quantity}]);
         }
     }
-    console.log("Se agrego al carrito :", cart)
+   console.log("Se agrego al carrito :", cart)
+    
 
     
 

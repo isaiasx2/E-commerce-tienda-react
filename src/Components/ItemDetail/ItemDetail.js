@@ -39,13 +39,14 @@ export const ItemDetail = ({item}) => {
             <div className="boton__carrito">
             {
               
-              goToCart 
-              ?<Link to="/cart" className="terminar__compra">Terminar compra</Link>
-              :<ItemCount initial={1} stock={5} onAdd={onAdd}/>
+              goToCart<1
+              ?<ItemCount initial={1} stock={5} onAdd={onAdd}/>
+              :<Link to="/cart" className="terminar__compra">Terminar compra</Link>
             }
             </div>
         </div>
     </div>
   )
 }
+
 
