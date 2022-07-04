@@ -1,0 +1,24 @@
+.itemCart {
+    width:auto;
+    display:grid;
+    
+    
+    
+
+
+}
+
+button {
+    width: fit-content;
+}
+img {
+    width:200px;
+}
+p {
+    font-family: 'Lexend Zetta', sans-serif; 
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,300;1,700&family=Lexend+Zetta:wght@900&display=swap');

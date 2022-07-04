@@ -13,7 +13,7 @@ export const ItemDetail = ({item}) => {
   const {addItem} = useCartContext();
   
  
-  
+  console.log(goToCart)
   
   
   

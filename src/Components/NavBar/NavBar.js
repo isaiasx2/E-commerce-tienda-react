@@ -1,6 +1,6 @@
 import React from 'react';
 import './NavBar.css';
-import CartWidget from '../CartWidget/CartWidget';
+import {CartWidget} from '../CartWidget/CartWidget';
 import {BsPhoneVibrate} from 'react-icons/all'
 import {GiPunchBlast} from 'react-icons/all'
 import {GiFrogPrince} from 'react-icons/all'
@@ -30,7 +30,7 @@ export const NavBar  = ()=> {
       
       <li><NavLink className="nav__link" to="/contacto" ><BsPhoneVibrate/>Contacto</NavLink></li>
       
-      <li><NavLink className="nav__link" to="cart" ><CartWidget/>Carrito</NavLink></li>
+      <li><NavLink className="nav__link" to="cart" ><CartWidget/></NavLink></li>
       
       </ul>
       
