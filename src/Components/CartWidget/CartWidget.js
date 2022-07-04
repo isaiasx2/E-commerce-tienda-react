@@ -9,8 +9,7 @@ export const CartWidget = ()=>{
     return(
         <>
         <FaOpencart />
-       
-        {console.log("productos :", totalProducts())}
+        <span>{totalProducts() || ""}</span>
         </>
         
        
@@ -18,3 +17,4 @@ export const CartWidget = ()=>{
 }
 
 
+export default CartWidget;
