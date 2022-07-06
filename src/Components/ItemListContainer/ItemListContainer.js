@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
-
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 import { ItemList } from "../ItemList/ItemList";
-import { Articulos } from "../Articulos/Articulos";
 import {useParams} from "react-router-dom";
 import "./ItemistContainer.css";
 
@@ -18,18 +17,26 @@ export const ItemListContainer = ()=>{
 
     const {categoriaId} = useParams();
 
-    const getItem = new Promise(resolve => {
-        setTimeout(()=>{
-            resolve(Articulos)
-        }, 2000);
-    });
+    
+
+    const querydb = getFirestore();
+    const queryCollection = collection(querydb, "articulos");
+    
+    
+
+
+
+
 
     useEffect(()=>{
         if(categoriaId){
-            getItem.then(res => setItem(res.filter(Articulos=>Articulos.category===categoriaId))).catch(err=>(console.log(err)));
+            const queryFilter = query(queryCollection, where("category", "==", categoriaId));
+            getDocs(queryFilter)
+            .then(res => setItem(res.docs.map(articulo => ({id: articulo.id, ...articulo.data()}))))
         }
         else {
-            getItem.then(res=>setItem(res)).catch(err=>console.log(err))
+            getDocs(queryCollection)
+                .then(res => setItem(res.docs.map(articulo => ({id: articulo.id, ...articulo.data()}))));
             }
 
     }, [categoriaId])
