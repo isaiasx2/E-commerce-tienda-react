@@ -19,24 +19,26 @@ export const ItemListContainer = ()=>{
 
     
 
+    
+    
     const querydb = getFirestore();
     const queryCollection = collection(querydb, "articulos");
-    
-    
 
 
 
 
 
     useEffect(()=>{
+        
+
         if(categoriaId){
-            const queryFilter = query(queryCollection, where("category", "==", categoriaId));
+            const queryFilter = query(queryCollection, where('category', '==', categoriaId));
             getDocs(queryFilter)
-            .then(res => setItem(res.docs.map(articulo => ({id: articulo.id, ...articulo.data()}))))
+                .then(res => setItem(res.docs.map(articulo => ({id: articulo.id, ...articulo.data()}))))
         }
-        else {
+            else {
             getDocs(queryCollection)
-                .then(res => setItem(res.docs.map(articulo => ({id: articulo.id, ...articulo.data()}))));
+                .then(res => setItem(res.docs.map(articulo => ({id:articulo.id, ...articulo.data()}))));
             }
 
     }, [categoriaId])
