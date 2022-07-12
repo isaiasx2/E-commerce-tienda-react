@@ -21,7 +21,8 @@ export const ItemDetailContainer = () => {
       const queryDB = getFirestore();
       const queryDoc = doc(queryDB, "articulos", detalleId);
       getDoc(queryDoc)
-        .then(res=> setItem({ id:res.id, ...res.data() }));
+      .then(res=> setItem({ id:res.id, ...res.data() }))
+      .catch(err => console.log(err))
     }, [detalleId])
 
 
