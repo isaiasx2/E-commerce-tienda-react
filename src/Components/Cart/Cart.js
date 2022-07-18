@@ -2,7 +2,7 @@ import React  from 'react'
 import { useCartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 import { ItemCart } from '../ItemCart/ItemCart';
-import { addDoc, collection, getFirestore, serverTimestamp } from 'firebase/firestore';
+import { Formulario } from '../Formulario/Formulario';
 
 
 
@@ -18,24 +18,7 @@ export const Cart = () => {
   
   
 
-  const order = {
-    buyer:{name: "Isaias",email: "isaias@gmail.com",phone: "224426"},
-    items:cart.map(product => ({id: product.id,name: product.name,price: product.price,quantity:product.quantity})),
-
-
-    date: serverTimestamp(),
-    total: totalPrice()
-
-      
-  }
-
-  const updateOrder = () => {
-    const db = getFirestore();
-    const ordersCollection = collection(db, 'orders');
-    addDoc(ordersCollection, order).then(({id})=>console.log(id)).catch(err =>console.log(err) )
-    
-    
-  }
+  
 
   if (cart.length === 0) {
     return (
@@ -54,7 +37,7 @@ export const Cart = () => {
     <p>
       Total: {totalPrice()}
     </p>
-    <button onClick={updateOrder}>Generar orden</button>
+    <Formulario />
     </>
   )
 }
