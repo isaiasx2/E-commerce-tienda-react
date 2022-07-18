@@ -13,7 +13,7 @@ export const Formulario = ()=>{
   const{register, handleSubmit} = useForm({defaultValues:{
     date: Date(),
     total: totalPrice(),
-    items: {...cart},
+    items: {cart},
 
   }}); 
 
@@ -66,7 +66,6 @@ export const Formulario = ()=>{
               type="number"
               {...register('contacto',{
               required:true,
-              pattern: /^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/
               })}
               
               
