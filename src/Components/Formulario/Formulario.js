@@ -2,7 +2,7 @@ import React,{Fragment} from "react";
 import { collection, getFirestore,addDoc,} from "firebase/firestore";
 import {useForm} from "react-hook-form";
 import { useCartContext } from "../../context/CartContext";
-
+import swal from "sweetalert";
 
 
 
@@ -21,7 +21,7 @@ export const Formulario = ()=>{
   const sendOrder = (user) =>{
     const db = getFirestore();
     const ordersCollection = collection(db, "orders");
-    addDoc(ordersCollection,user).then(({id}) =>  console.log(id)).catch(err =>console.log(err));
+    addDoc(ordersCollection,user).then(({id}) =>  swal({title: "Muy bien!",text: "Tu orden " +(id)+ " fue generada!", icon: "success"})).catch(err =>console.log(err));
   }
 
 
