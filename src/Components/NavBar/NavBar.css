@@ -9,7 +9,7 @@
     column-gap: 120px;
     width: 100%;
     align-items: flex-end;
-    background-color: black;
+    background-color: rgb(215, 238, 162);
     
     
     
@@ -30,7 +30,7 @@
     text-transform: capitalize;
     font-weight: bolder;
     text-decoration: none;
-    color:rgb(166, 255, 0);
+    color:rgb(7, 7, 7);
     flex-direction: row;
     align-items:center;
     flex-direction: column;
@@ -39,13 +39,14 @@
 }
 
 .navegacion h1 {
-    color:rgb(166, 255, 0);
-    font-family: 'Fascinate', cursive;
+    color:rgb(7, 7, 7);
+    font-family: 'Roboto', sans-serif;
     font-weight: bolder;
-    background-color: black;
+    background-color: rgb(215, 238, 162);
     margin: 0;
     font-size: 30px;
     width:auto;
+
     
 }
 
@@ -82,3 +83,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,300;1,700&family=Lexend+Zetta:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,300;1,700&family=Lexend+Zetta:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,300;1,700&family=Fascinate&family=Lexend+Zetta:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap');

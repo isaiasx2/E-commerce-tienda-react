@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { ItemDetail } from '../ItemDetail/ItemDetail';
 import {useParams} from "react-router-dom";
 import {getFirestore,doc, getDoc} from "firebase/firestore";
+import Spinner from "react-bootstrap/Spinner"
 
 
 
@@ -34,7 +35,7 @@ export const ItemDetailContainer = () => {
 
 
   return (
-    <div>{item?<ItemDetail item={item}/> : <h2>Cargando detalles...</h2>}</div>
+    <div>{item?<ItemDetail item={item}/> : <Spinner animation="border" variant="primary" />}</div>
   )
 }
 

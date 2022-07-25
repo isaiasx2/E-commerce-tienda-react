@@ -1,6 +1,7 @@
 .itemCart {
     width:auto;
     display:grid;
+    row-gap: 20px;
     
     
     
@@ -13,6 +14,7 @@ button {
 }
 img {
     width:200px;
+    row-gap: 20px;
 }
 p {
     font-family: 'Lexend Zetta', sans-serif; 

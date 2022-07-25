@@ -1,10 +1,13 @@
-import React,{Fragment} from "react";
+import React from "react";
 import { collection, getFirestore,addDoc, updateDoc,doc} from "firebase/firestore";
 import {useForm} from "react-hook-form";
 import { useCartContext } from "../../context/CartContext";
 import swal from "sweetalert";
-import { useState } from "react";
-import {useParams} from "react-router-dom";
+import Form from "react-bootstrap/Form"
+import "./Formulario.css";
+
+
+
 
 
 
@@ -42,20 +45,20 @@ export const Formulario = ()=>{
   const sendOrder = (user, event) =>{
     const db = getFirestore();
     const ordersCollection = collection(db, "orders");
-    addDoc(ordersCollection,user).then(({id}) =>  swal({title: "Muy bien!",text: "Tu orden " +(id)+ " fue generada!", icon: "success"})).catch(err =>console.log(err))
+    addDoc(ordersCollection,user).then(({id}) =>  swal({title: "Muy bien!",text: "Tu orden " +(id)+ " fue generada!", icon: "success"})).catch(err =>console.log(err));
+
+    cart.forEach(item => {
+      const stockUpd = doc(db,"articulos",(item.id));
+      updateDoc(stockUpd, {stock: item.stock - item.quantity})
+    })
+    
     event.target.reset();
     
-   
- }
+   }
 
 
   
- const updateStock = ()=>{
-   
-  const db = getFirestore();
-  const stockUpd = collection(db,"articulos")
-  updateDoc(stockUpd, {stock:20})
-}
+
 
 
     
@@ -83,16 +86,17 @@ export const Formulario = ()=>{
 
 
   return (
-    <Fragment>
+    <div className="formulario">
 
 
 
     
-      <h1>Formulario</h1>
-      <form onSubmit={handleSubmit(sendOrder)}>
+      
+      <Form onSubmit={handleSubmit(sendOrder)}>
         <div>
-          <label>Nombre</label>
-          <input
+          <Form.Label>Nombre</Form.Label>
+          <Form.Control
+              size="sm"
               placeholder="Ingrese su nombre"
               type="text"
               {...register('buyer.nombre',{
@@ -103,8 +107,9 @@ export const Formulario = ()=>{
               
         </div>
         <div>
-          <label>E-mail</label>
-          <input
+          <Form.Label>E-mail</Form.Label>
+          <Form.Control
+              size="sm"
               placeholder="Ingrese su e-mail"
               type="email"
               {...register('buyer.email',{
@@ -116,8 +121,9 @@ export const Formulario = ()=>{
           
         </div>
         <div>
-          <label>Contacto</label>
-          <input
+          <Form.Label>Contacto</Form.Label>
+          <Form.Control
+              size="sm"
               placeholder="Ingrese numero de contacto"
               type="number"
               {...register('buyer.contacto',{
@@ -128,10 +134,10 @@ export const Formulario = ()=>{
           />
           </div>
           <div>
-            <input type="submit" value="Confirmar orden" />
+            <input className="submit" type="submit" value="Confirmar orden" />
           </div>
-      </form>
-    </Fragment>
+      </Form>
+    </div>
 )
 
 

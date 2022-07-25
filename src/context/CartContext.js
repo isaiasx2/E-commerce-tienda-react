@@ -37,6 +37,17 @@ const CartProvider = ({children}) =>{
     const isInCart = (id) => {return cart.find(product => product.id === id)}
 
     const removeProduct = (id) => setCart(cart.filter(product => product.id !== id));
+
+    // const removeItem = (id) => setCart(cart.forEach(item => {
+    //     if (item.id === id){
+    //         return item.quantity - 1
+    //     }
+        
+    // }))
+         
+    
+        
+    
     
 
    
@@ -49,6 +60,7 @@ const CartProvider = ({children}) =>{
             clearCart,
             isInCart,
             removeProduct,
+            // removeItem,
             addItem,
             totalPrice,
             totalProducts,

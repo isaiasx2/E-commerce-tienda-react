@@ -1,0 +1,11 @@
+.formulario {
+    width: 20%;
+}
+.submit{
+    margin-top: 10px;
+    background-color: #3483fa;
+    color: #fff;
+    border-style: none;
+    padding: 5px;
+    border-radius: 5px;
+}

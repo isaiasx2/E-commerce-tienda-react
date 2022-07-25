@@ -1,0 +1,19 @@
+
+.mensaje_volver{
+    display: grid;
+    grid-template-columns: auto;
+    
+}
+
+
+
+
+.back{
+    padding: 10px;
+    color: black;
+    margin-right: 80%;
+    border-radius: 5px;
+    text-decoration: none;
+    
+
+}
