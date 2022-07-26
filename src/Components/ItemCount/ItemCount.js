@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import "./ItemCount.css";
+import Button from "react-bootstrap/Button"
 
 
 const useCounter = ()=>{
@@ -35,11 +36,11 @@ export const ItemCount = ({initial, stock, onAdd})=>{
         <div className="contador" >
             
         
-            <button className="bot1" disabled={counter <= 1} onClick={restar}>-</button>
+            <Button variant="outline-dark" className="bot1" disabled={counter <= 1} onClick={restar}>-</Button>
             <span>  {counter}  </span>
-            <button className="bot2" disabled={counter >= stock} onClick={sumar}>+</button>
+            <Button className="bot2" disabled={counter >= stock} onClick={sumar}>+</Button>
             <>
-                <button className="botConf" disabled={stock <= 0} onClick={()=>onAdd(counter)}>Agregar al Carrito</button>
+                <Button variant="outline-dark" className="botConf" disabled={stock <= 0} onClick={()=>onAdd(counter)}>Agregar al Carrito</Button>
             </>
             
         </div>   

@@ -1,7 +1,7 @@
-.itemCart {
+.producto__carrito {
     width:auto;
-    display:grid;
-    row-gap: 20px;
+    display:block;
+    
     
     
     
@@ -12,8 +12,8 @@
 button {
     width: fit-content;
 }
-img {
-    width:200px;
+.imagen {
+    width:100px;
     row-gap: 20px;
 }
 p {

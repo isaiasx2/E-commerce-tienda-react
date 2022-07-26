@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { ItemCart } from '../ItemCart/ItemCart';
 import { Formulario } from '../Formulario/Formulario';
 import "./Cart.css"
+import { Grid } from '@mui/material';
 
 
 
@@ -16,6 +17,8 @@ import "./Cart.css"
 
 export const Cart = () => {
   const {cart, totalPrice} = useCartContext();
+  
+  
   
   
 
@@ -32,13 +35,15 @@ export const Cart = () => {
 
   return (
     <>
+    <Grid container spacing={{xs:2, md:2,}} columns={{xs: 2, sm: 8, md: 12}}>
+    
     {
-      cart.map(product=><ItemCart key={product.id} product={product}/>)
+      cart.map(product=><Grid item xs={4} sm={4} md={4}><ItemCart key={product.id} product={product}/></Grid>)
     }
-    <p>
-      Total: {totalPrice()}
-    </p>
+    </Grid>
+    <p>Total: {totalPrice()}</p>
     <Formulario />
+    
     </>
   )
 }

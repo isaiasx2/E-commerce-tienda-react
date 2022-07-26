@@ -5,6 +5,7 @@ import { useCartContext } from "../../context/CartContext";
 import swal from "sweetalert";
 import Form from "react-bootstrap/Form"
 import "./Formulario.css";
+import Button from "react-bootstrap/Button"
 
 
 
@@ -134,7 +135,7 @@ export const Formulario = ()=>{
           />
           </div>
           <div>
-            <input className="submit" type="submit" value="Confirmar orden" />
+            <Button className="submit" variant="outline-success" type="submit" >"Confirmar orden" </Button>
           </div>
       </Form>
     </div>

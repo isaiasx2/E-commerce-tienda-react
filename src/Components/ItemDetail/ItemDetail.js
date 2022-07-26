@@ -4,6 +4,7 @@ import { ItemCount } from '../ItemCount/ItemCount';
 import { useState } from 'react';
 import {Link} from 'react-router-dom';
 import { useCartContext } from '../../context/CartContext';
+import Card from "react-bootstrap/Card";
 
 
 export const ItemDetail = ({item}) => {
@@ -28,24 +29,27 @@ export const ItemDetail = ({item}) => {
 
 
   return (
-    <div className="container">
-        <div className="detail">
-            <img className="detail__image" src={item.pictureUrl} alt=""/>
-            <div className="contents">
-                <h2>{item.name}</h2>
-                <p>"{item.description}"</p>
-                <span>Precio : {item.price}$</span>
-            </div>
-            <div className="boton__carrito">
+    <Card className="contenedor__card" style={{ 
+    width: "18rem",
+    display:"flex",
+    justifyItems:"center"}}>
+        
+      <Card.Img variant="top" src={item.pictureUrl} alt=""/>
+        <Card.Body>
+            <Card.Title>{item.name}</Card.Title>
+            <Card.Text>"{item.description}"</Card.Text>
+            <Card.Subtitle>Precio : {item.price}$</Card.Subtitle>
+        </Card.Body>
+         <div className="boton__carrito">
             {
               
-              goToCart<1
-              ?<ItemCount initial={1} stock={5} onAdd={onAdd}/>
-              :<Link to="/cart" className="terminar__compra">Terminar compra</Link>
+            goToCart<1
+            ?<ItemCount initial={1} stock={5} onAdd={onAdd}/>
+            :<Link to="/cart" className="terminar__compra">Terminar compra</Link>
             }
-            </div>
-        </div>
-    </div>
+          </div>
+        
+    </Card>
   )
 }
 
