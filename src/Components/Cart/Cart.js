@@ -5,6 +5,10 @@ import { ItemCart } from '../ItemCart/ItemCart';
 import { Formulario } from '../Formulario/Formulario';
 import "./Cart.css"
 import { Grid } from '@mui/material';
+import swal from 'sweetalert';
+import {Button, IconButton} from '@mui/material';
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart"
+
 
 
 
@@ -26,10 +30,13 @@ export const Cart = () => {
 
   if (cart.length === 0) {
     return (
-      <div className="mensaje_volver">
-      <p  className='back'>No hay elementos en el carrito</p>
-      <Link to="/" ><h2 className='back'>¡Volver a comprar!</h2></Link>
-      </div>
+
+      swal({
+        title:"No hay elementos en el carrito",
+        icon: "info",
+    }),
+      <Link to="/" ><Button variant='contained'><IconButton><AddShoppingCartIcon color='action'/></IconButton>¡Volver a comprar!</Button></Link>
+      
     )
   }
 

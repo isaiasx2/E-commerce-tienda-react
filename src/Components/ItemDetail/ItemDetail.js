@@ -4,7 +4,7 @@ import { ItemCount } from '../ItemCount/ItemCount';
 import { useState } from 'react';
 import {Link} from 'react-router-dom';
 import { useCartContext } from '../../context/CartContext';
-import Card from "react-bootstrap/Card";
+import {Card,Button} from "react-bootstrap";
 
 
 export const ItemDetail = ({item}) => {
@@ -45,7 +45,7 @@ export const ItemDetail = ({item}) => {
               
             goToCart<1
             ?<ItemCount initial={1} stock={5} onAdd={onAdd}/>
-            :<Link to="/cart" className="terminar__compra">Terminar compra</Link>
+            :<Link to="/cart" ><Button style={{margin: "5px",}} className="outline-primary">Terminar compra</Button></Link>
             }
           </div>
         

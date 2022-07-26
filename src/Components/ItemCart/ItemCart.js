@@ -27,7 +27,7 @@ export const ItemCart = ({product})=>{
             <Card.Subtitle>Cantidad : {product.quantity}</Card.Subtitle>
             <Card.Text>Precio : {product.price}</Card.Text>
             <Card.Text>Subtotal : ${product.quantity * product.price}</Card.Text>
-            <Button variant="primary" onClick={()=> removeProduct(product.id)}>Eliminar</Button>
+            <Button variant="outline-primary" onClick={()=> removeProduct(product.id)}>Eliminar</Button>
            
         </Card.Body>
             
