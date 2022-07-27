@@ -1,3 +1,4 @@
+![E-commerceGif](https://user-images.githubusercontent.com/41174284/181387350-c70f3588-dc0d-4ea9-ae19-b2378f128b56.gif)
 ## TIENDA FALSA DE REMERAS CON TEMATICA DE "COMICS"
 https://tienda-luquez.vercel.app/
 >Para levantar el proyecto desde la consola:
