@@ -13,6 +13,7 @@ import {NavLink} from "react-router-dom"
 
 
 
+
 export const NavBar  = ()=> {
   
     return (
@@ -20,7 +21,7 @@ export const NavBar  = ()=> {
       <header>
     
       <nav className='navegacion'>
-      <h1><NavLink className="nav__link" to="/">Tienda de remeras Comic-Heros</NavLink></h1>
+      <h1><NavLink className="nav__link" to="/"><h1>!Tienda Comic-Heros!</h1></NavLink></h1>
       <ul>
       <li>
       <NavLink className="nav__link" to="/categoria/marvel" ><GiPunchBlast/>Marvel Team</NavLink> </li>

@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+@font-face {
+  font-family:'Comic' ;
+  src: local('ComicShaded'), url("./fonts/Engcomica.otf") format("opentype");
+  
+}   
+@font-face {
+  font-family: "ComicShade";
+  src: local("ComicShade"), url("./fonts/SF-Comic-Script-Shaded.ttf") format("truetype");
+}
