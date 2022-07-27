@@ -135,7 +135,7 @@ export const Formulario = ()=>{
           />
           </div>
           <div>
-            <Button className="submit" variant="outline-success" type="submit" >"Confirmar orden" </Button>
+            <Button className="submit" variant="outline-success" type="submit" required>"Confirmar orden" </Button>
           </div>
       </Form>
     </div>

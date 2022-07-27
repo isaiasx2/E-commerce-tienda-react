@@ -41,7 +41,7 @@ export const Cart = () => {
   }
 
   return (
-    <>
+    <div className="carrito-cart">
     <Grid container spacing={{xs:2, md:2,}} columns={{xs: 2, sm: 8, md: 12}}>
     
     {
@@ -51,7 +51,7 @@ export const Cart = () => {
     <p>Total: {totalPrice()}</p>
     <Formulario />
     
-    </>
+    </div>
   )
 }
 

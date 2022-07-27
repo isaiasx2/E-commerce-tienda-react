@@ -41,8 +41,8 @@ export const Contacto = ()=>{
       addDoc(ordersCollection,user).then(({id}) =>  swal({title: "Muy bien!",text: "Tu solicitud " +(id)+ " fue generada!", icon: "info"})).catch(err =>console.log(err));
   
       
+      event.target.reset()
       
-      event.target.reset();
       
      }
   
@@ -117,7 +117,7 @@ export const Contacto = ()=>{
             </div>
             
             <div>
-              <Button className="submit" variant="outline-success" type="submit" >"Confirmar envio" </Button>
+              <Button className="submit" variant="outline-success" type="submit" required>"Confirmar envio" </Button>
             </div>
         </Form>
       </div>
