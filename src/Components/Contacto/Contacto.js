@@ -5,7 +5,6 @@ import swal from "sweetalert";
 import Form from "react-bootstrap/Form"
 import "./Contacto.css";
 import Button from "react-bootstrap/Button"
-import { Link } from "react-router-dom";
 
 
 
@@ -117,7 +116,7 @@ export const Contacto = ()=>{
             </div>
             
             <div>
-              <Button className="submit" variant="outline-success" type="submit" required>"Confirmar envio" </Button>
+              <Button className="submit" variant="outline-success" type="submit" required>Enviar </Button>
             </div>
         </Form>
       </div>

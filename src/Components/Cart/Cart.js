@@ -6,7 +6,7 @@ import { Formulario } from '../Formulario/Formulario';
 import "./Cart.css"
 import { Grid } from '@mui/material';
 import swal from 'sweetalert';
-import {Button, IconButton} from '@mui/material';
+import {Button, IconButton, Alert } from '@mui/material';
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart"
 
 
@@ -48,7 +48,7 @@ export const Cart = () => {
       cart.map(product=><Grid item xs={4} sm={4} md={4}><ItemCart key={product.id} product={product}/></Grid>)
     }
     </Grid>
-    <p>Total: {totalPrice()}</p>
+    <Alert severity="success"><p>Total: {totalPrice()}</p></Alert>
     <Formulario />
     
     </div>
